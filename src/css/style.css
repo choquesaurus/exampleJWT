@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.azul{
+    color:blue;
+}
+.contenedor{
+    width: 100vw;
+    height: calc(100vh - 30vh);
+    display: flex;
+
+}
+.centro{
+    margin: auto;
+    width: 25rem;
+    height: 25rem;
+   box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+body{
+    background: rgba(255,255,255,0.2);
+}

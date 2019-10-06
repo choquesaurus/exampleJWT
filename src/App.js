@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
 
+
+
+import Layaout from './components/layaout';
+import Usercreate from './components/usercreate';
+import Login from './components/userlogin';
+import Error404 from './components/Error404';
+import Go from  './components/Go';
+import  {BrowserRouter,Route,Switch} from 'react-router-dom';
+
+import './css/style.css';
+//import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js';
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (    
+    
+    <BrowserRouter>
+      <Layaout>
+        <Switch>
+          <Route exact path="/"  component={Login}></Route>
+          <Route exact path="/login" component={Login}></Route>
+          <Route exact path="/regs" component={Usercreate}></Route>
+          <Route exact path="/Principal" component={Go}></Route>
+          <Route component={Error404}></Route>
+        </Switch>
+
+      </Layaout>
+   
+    </BrowserRouter>
   );
 }
 
