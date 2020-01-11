@@ -1,7 +1,9 @@
+require('dotenv').config();
+const secretKeyExample=process.env.secretKeyExample;
 import {Router} from  'express';
 //import  control from  '../controllers/controller';
 import  jwt from 'jsonwebtoken';
-import  {secretKeyExample} from '../dbMongo/configuration/configuration';
+//import  {secretKeyExample} from '../dbMongo/configuration/configuration';
 import EsquemaPost from '../dbMongo/model/modelcreateuser';
 //import { nextTick } from 'q';
 //import {Redirect} from  'react-router-dom';
